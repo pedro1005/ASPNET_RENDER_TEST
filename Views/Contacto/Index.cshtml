@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Contacto</h1>
+</div>
+
+<br/>
+
+<div class="container mt-4">
+    <h2>Formulário de Contacto</h2>
+
+    <!-- Formulário de Contato -->
+    <form method="post" action="/Contacto/Enviar">
+        <!-- Campo de Assunto -->
+        <div class="form-group">
+            <label for="Assunto">Assunto</label>
+            <input type="text" class="form-control" id="Assunto" name="Assunto" required />
+        </div>
+
+        <!-- Campo de Email -->
+        <div class="form-group">
+            <label for="Email">Seu Email</label>
+            <input type="email" class="form-control" id="Email" name="Email" required />
+        </div>
+
+        <!-- Campo de Mensagem -->
+        <div class="form-group">
+            <label for="Mensagem">Mensagem</label>
+            <textarea class="form-control" id="Mensagem" name="Mensagem" rows="5" required></textarea>
+        </div>
+        <br/>
+        <!-- Botão Enviar TODO: adicionar acçao-->
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>

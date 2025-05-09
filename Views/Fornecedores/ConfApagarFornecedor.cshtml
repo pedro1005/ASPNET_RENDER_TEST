@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Apagar Confirmação";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Apagar Fornecedor</h1>
+    <p>Deseja realmente apagar o fornecedor <strong>@Model.Nome</strong>?</p>
+</div>
+<br/>
+<div class="text-center">
+    <a asp-controller="Fornecedores" asp-action="Index" class="btn btn-dark">
+        ← Voltar
+    </a>
+
+    <!-- Formulário para remover o produto -->
+    <form method="post" asp-controller="Fornecedores" asp-action="ApagarFornecedor" asp-route-id="@Model.Id" class="d-inline">
+        <button type="submit" class="btn btn-danger">Apagar</button>
+    </form>
+</div>
+<br/>

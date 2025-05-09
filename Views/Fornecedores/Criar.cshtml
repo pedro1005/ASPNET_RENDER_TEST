@@ -1,0 +1,61 @@
+@model EisntMvc.Models.FornecedorModel
+
+@{
+    ViewData["Title"] = "Adicionar fornecedor";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Adicionar Fornecedor</h1>
+</div>
+
+<div class="mt-4">
+    <a asp-controller="Fornecedores" asp-action="Index" class="btn btn-dark">
+        ← Voltar
+    </a>
+</div>
+
+<br/>
+
+<form asp-controller="Fornecedores" asp-action="Criar" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" asp-for="Nome" class="form-control" placeholder="Insira nome do fornecedor" required autofocus>
+                <label>Nome</label>
+                <span class="text-danger" asp-validation-for="Nome"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" asp-for="Telefone" class="form-control" placeholder="Insira o telefone do fornecedor" required>
+                <label>Telefone</label>
+                <span class="text-danger" asp-validation-for="Telefone"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="email" asp-for="Email" class="form-control" placeholder="Insira o email do fornecedor" required>
+                <label>Email</label>
+                <span class="text-danger" asp-validation-for="Email"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" asp-for="Morada" class="form-control" placeholder="Insira a morada do fornecedor" required>
+                <label>Morada</label>
+                <span class="text-danger" asp-validation-for="Morada"></span>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary w-100">
+        <i class="bi bi-check-circle"></i> Criar Fornecedor
+    </button>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

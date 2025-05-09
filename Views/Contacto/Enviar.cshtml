@@ -1,0 +1,31 @@
+@model EisntMvc.Models.ContactoModel
+
+@{
+    ViewData["Title"] = "Contacto enviado";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Contacto enviado</h1>
+</div>
+
+<br/>
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Detalhes da Mensagem</h4>
+            <p><strong>Assunto:</strong> @Model.Assunto</p>
+            <p><strong>Email:</strong> @Model.Email</p>
+            <p><strong>Mensagem:</strong></p>
+            <blockquote class="blockquote">
+                <p class="mb-0">@Model.Mensagem</p>
+            </blockquote>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4">
+    <a asp-controller="Home" asp-action="Index" class="btn btn-dark">
+        ← Voltar
+    </a>
+</div>

@@ -1,0 +1,40 @@
+@model EisntMvc.Models.CategoriaModel
+
+@{
+    ViewData["Title"] = "Editar Produto";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Editar Categoria</h1>
+</div>
+
+<div class="mt-4">
+    <a asp-controller="Categorias" asp-action="Index" class="btn btn-dark">
+        ← Voltar
+    </a>
+</div>
+
+<br/>
+
+<form asp-controller="Categorias" asp-action="Alterar" method="post">
+    <input type="hidden" asp-for="Id"/>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" asp-for="Nome" class="form-control" placeholder="Insira nome da categoria." required autofocus>
+                <label>Nome</label>
+                <span class="text-danger" asp-validation-for="Nome"></span>
+            </div>
+        </div>
+        
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-primary w-100">
+        <i class="bi bi-check-circle"></i> Alterar
+    </button>
+</form>
+
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

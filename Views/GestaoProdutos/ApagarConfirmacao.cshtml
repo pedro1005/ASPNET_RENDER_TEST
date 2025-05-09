@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Apagar produto";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Apagar Produto</h1>
+    <p>Deseja realmente apagar o produto <strong>@Model.Nome</strong>?</p>
+</div>
+<br/>
+<div class="text-center">
+    <a asp-controller="GestaoProdutos" asp-action="Index" class="btn btn-dark">
+        ← Voltar
+    </a>
+
+    <!-- Formulário para remover o produto -->
+    <form method="post" asp-controller="GestaoProdutos" asp-action="Apagar" asp-route-id="@Model.Id" class="d-inline">
+        <button type="submit" class="btn btn-danger">Apagar</button>
+    </form>
+</div>
+<br/>

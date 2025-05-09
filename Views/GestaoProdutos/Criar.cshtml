@@ -1,0 +1,104 @@
+@model EisntMvc.Models.ViewModels.ProdutosViewModel
+
+@{
+    ViewData["Title"] = "Adicionar Produto";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Adicionar Produto</h1>
+</div>
+
+<div class="mt-4">
+    <a asp-controller="GestaoProdutos" asp-action="Index" class="btn btn-dark">
+        ← Voltar
+    </a>
+</div>
+
+<br/>
+
+<form asp-controller="GestaoProdutos" asp-action="Criar" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" asp-for="Sku" class="form-control" placeholder="Insira SKU do produto" required autofocus>
+                <label>SKU</label>
+                <span class="text-danger" asp-validation-for="Sku"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" asp-for="Nome" class="form-control" placeholder="Insira nome do produto" required>
+                <label>Nome</label>
+                <span class="text-danger" asp-validation-for="Nome"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-floating mb-3">
+        <textarea asp-for="Descricao" class="form-control" placeholder="Insira descrição do produto" required></textarea>
+        <label>Descricao</label>
+        <span class="text-danger" asp-validation-for="Descricao"></span>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                <input type="number" asp-for="Qtd" class="form-control" placeholder="Insira quantidade" min="0" step="1" required>
+                <label>Quantidade</label>
+                <span class="text-danger" asp-validation-for="Qtd"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                <input type="number" asp-for="Preco" class="form-control" placeholder="Insira preço" step="0.01" min="0" required>
+                <label>Preço</label>
+                <span class="text-danger" asp-validation-for="Preco"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <select asp-for="Fornecedor_Id" class="form-select" required>
+                    <option value="">Selecione um fornecedor</option>
+                    @foreach (var fornecedor in Model.Fornecedores)
+                    {
+                        <option value="@fornecedor.Id">@fornecedor.Nome</option>
+                    }
+                </select>
+                <label>Fornecedor</label>
+                <span class="text-danger" asp-validation-for="Fornecedor_Id"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <select asp-for="Categoria_Id" class="form-select" required>
+                    <option value="">Selecione uma categoria</option>
+                    @foreach (var categoria in Model.Categorias)
+                    {
+                        <option value="@categoria.Id">@categoria.Nome</option>
+                    }
+                </select>
+                <label>Categoria</label>
+                <span class="text-danger" asp-validation-for="Categoria_Id"></span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <button class="btn btn-primary w-100">
+        <i class="bi bi-check-circle"></i> Criar
+    </button>
+    
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+
+

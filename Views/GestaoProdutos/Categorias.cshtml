@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Categorias";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Categorias</h1>
+    <img src="~/images/tags.svg" alt="Categ" style="width: 50px; height: 50px;" />
+</div>
+<br />
+<br />
+<div>
+    <a asp-controller="GestaoProdutos" asp-action="Index" class="btn btn-dark">
+        ← Voltar
+    </a>
+    <a asp-controller="GestaoProdutos" class="btn btn-dark">
+        Adicionar Categoria
+    </a>
+    <a asp-controller="GestaoProdutos" asp-action="Fornecedores" class="btn btn-dark">
+        Fornecedores
+    </a>
+</div>
+<br />
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col"></th>
+      
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>id</td>
+        <td>nome</td>
+        <td class="text-end">
+            <div>
+                <a asp-controller="GestaoProdutos" asp-action="EditarCategoria" class="btn btn-warning">
+                    <i class="bi bi-pencil"></i> Editar
+                </a>
+                <a asp-controller="GestaoProdutos" asp-action="ConfApagarCategoria" class="btn btn-danger">
+                    <i class="bi bi-trash"></i> Apagar
+                </a>
+            </div>
+        </td>
+    </tr>
+   
+    </tbody>
+</table>

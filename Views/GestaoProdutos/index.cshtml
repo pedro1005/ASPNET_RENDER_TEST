@@ -1,0 +1,93 @@
+@model EisntMvc.Models.ViewModels.ProdutosViewModel
+
+@{
+    ViewData["Title"] = "Gestão de Produtos";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Gestão de Produtos</h1>
+    <img src="~/images/logo.png" alt="Logo" style="width: 50px; height: 50px;" />
+</div>
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">x</button>
+        @TempData["Mensagemsucesso"]
+    </div>
+}
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+<br />
+
+<div>
+    <a asp-controller="GestaoProdutos" asp-action="Criar" class="btn btn-dark">
+        <i class="bi bi-plus-circle"></i> Adicionar Produto
+    </a>
+    <a asp-controller="Categorias" asp-action="Index" class="btn btn-dark">
+        <i class="bi bi-tags"></i> Categorias
+    </a>
+    <a asp-controller="Fornecedores" asp-action="Index" class="btn btn-dark">
+        <i class="bi bi-truck"></i> Fornecedores
+    </a>
+</div>
+<br />
+
+@if (Model.Produtos != null && Model.Produtos.Any())
+{
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">SKU</th>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Qtd</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">PVP/Und</th>
+                    <th scope="col">Fornecedor</th>
+                    <th scope="col" class="text-center">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var produto in Model.Produtos)
+                {
+                    // Encontrar a categoria pelo ID
+                    var categoriaNome = Model.Categorias.FirstOrDefault(c => c.Id == produto.Categoria_Id)?.Nome ?? "N/A";
+
+                    // Encontrar o fornecedor pelo ID
+                    var fornecedorNome = Model.Fornecedores.FirstOrDefault(f => f.Id == produto.Fornecedor_Id)?.Nome ?? "N/A";
+
+                    <tr>
+                        <th scope="row">@produto.Id</th>
+                        <td>@produto.Sku</td>
+                        <td>@produto.Nome</td>
+                        <td>@produto.Descricao</td>
+                        <td>@produto.Qtd</td>
+                        <td>@categoriaNome</td>
+                        <td>@produto.Preco.ToString("C", new System.Globalization.CultureInfo("pt-PT"))</td>
+                        <td>@fornecedorNome</td>
+                        <td class="text-center">
+                            <a class="btn btn-warning btn-sm" asp-action="Editar" asp-route-id="@produto.Id">
+                                <i class="bi bi-pencil"></i> Editar
+                            </a>
+                            <a class="btn btn-danger btn-sm" asp-action="ApagarConfirmacao" asp-route-id="@produto.Id">
+                                <i class="bi bi-trash"></i> Apagar
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-info text-center">
+        <i class="bi bi-exclamation-circle"></i> Nenhum produto encontrado.
+    </div>
+}

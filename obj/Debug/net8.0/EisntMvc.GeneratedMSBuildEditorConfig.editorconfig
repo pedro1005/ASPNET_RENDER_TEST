@@ -1,0 +1,135 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EisntMvc
+build_property.RootNamespace = EisntMvc
+build_property.ProjectDir = /home/pedmonte/C#/apps_mvc/EisntMvc/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/pedmonte/C#/apps_mvc/EisntMvc
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Categorias/ApagarCategoria.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9BcGFnYXJDYXRlZ29yaWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Categorias/ConfApagarCategoria.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9Db25mQXBhZ2FyQ2F0ZWdvcmlhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Categorias/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9Dcmlhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Categorias/EditarCategoria.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9FZGl0YXJDYXRlZ29yaWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Categorias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Categorias/PopupError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmlhcy9Qb3B1cEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Contacto/Enviar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGFjdG8vRW52aWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Contacto/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGFjdG8vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Fornecedores/ApagarFornecedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybmVjZWRvcmVzL0FwYWdhckZvcm5lY2Vkb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Fornecedores/ConfApagarFornecedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybmVjZWRvcmVzL0NvbmZBcGFnYXJGb3JuZWNlZG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Fornecedores/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybmVjZWRvcmVzL0NyaWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Fornecedores/EditarFornecedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybmVjZWRvcmVzL0VkaXRhckZvcm5lY2Vkb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Fornecedores/GuardarFornecedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybmVjZWRvcmVzL0d1YXJkYXJGb3JuZWNlZG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Fornecedores/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9ybmVjZWRvcmVzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/GestaoProdutos/Apagar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VzdGFvUHJvZHV0b3MvQXBhZ2FyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/GestaoProdutos/ApagarConfirmacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VzdGFvUHJvZHV0b3MvQXBhZ2FyQ29uZmlybWFjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/GestaoProdutos/Categorias.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VzdGFvUHJvZHV0b3MvQ2F0ZWdvcmlhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/GestaoProdutos/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VzdGFvUHJvZHV0b3MvQ3JpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/GestaoProdutos/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VzdGFvUHJvZHV0b3MvRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/GestaoProdutos/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VzdGFvUHJvZHV0b3MvaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/pedmonte/C\#/apps_mvc/EisntMvc/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-t8qnngp8nv
