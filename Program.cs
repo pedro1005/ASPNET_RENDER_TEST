@@ -6,27 +6,32 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<EisntDbContext>(options => 
-    options.UseMySQL("Server=localhost;Port=3306;Database=GestorClientes;User=root;Password=12345678;"));
+
+// Set up PostgreSQL connection using the connection string from appsettings or environment variable
+builder.Services.AddDbContext<EisntDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Register your repository
 builder.Services.AddScoped<IRepositorioProdutos, RepositorioProdutos>();
 
+// Session configuration
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Tempo que a sessão ficará ativa
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Time the session will remain active
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
 
-// Configurar Swagger
+// Configure Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Configurar Sessões, Autenticação e MVC
+// Configure Sessions, Authentication, and MVC
 builder.Services.AddSession();
 
 var app = builder.Build();
 
-// Ativar Swagger apenas no ambiente de desenvolvimento
+// Enable Swagger only in development environment
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -36,11 +41,11 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline for non-development environments
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    // Default HSTS value is 30 days. You might want to change this for production.
     app.UseHsts();
 }
 
@@ -49,15 +54,17 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+// Enable session, authentication, and authorization
 app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Default routing configuration
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-// Rota para API
+// API route
 app.MapControllers();
 
 app.Run();
