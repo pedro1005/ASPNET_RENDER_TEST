@@ -63,14 +63,6 @@
               "target": "Package",
               "version": "[8.0.7, )"
             },
-            "MySql.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.11, )"
-            },
-            "MySqlConnector.DependencyInjection": {
-              "target": "Package",
-              "version": "[2.4.0, )"
-            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[9.0.4, )"
