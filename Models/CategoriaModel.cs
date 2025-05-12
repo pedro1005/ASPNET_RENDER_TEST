@@ -7,5 +7,6 @@ public class CategoriaModel
     [Key]
     public int Id { get; set; }
     
+    [Column(TypeName = "text")]
     public string Nome { get; set; }
 }

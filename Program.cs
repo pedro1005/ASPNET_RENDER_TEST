@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews();
 
 // Set up PostgreSQL connection using the connection string from appsettings or environment variable
 builder.Services.AddDbContext<EisntDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql("Host=dpg-d0f9ehpr0fns7397cui0-a.frankfurt-postgres.render.com;Database=gestor_clientes;Username=root;Password=yoBnbpLHsok1eQOUw1tQ6qYWUTiJ4nIM"));
 
 // Register your repository
 builder.Services.AddScoped<IRepositorioProdutos, RepositorioProdutos>();

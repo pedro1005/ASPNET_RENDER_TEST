@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/pedmonte/C#/apps_mvc/EisntMvc/EisntMvc.csproj": {}
+    "/home/pedmonte/C#/apps_mvc/ASPNET_RENDER_TEST/EisntMvc.csproj": {}
   },
   "projects": {
-    "/home/pedmonte/C#/apps_mvc/EisntMvc/EisntMvc.csproj": {
+    "/home/pedmonte/C#/apps_mvc/ASPNET_RENDER_TEST/EisntMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/pedmonte/C#/apps_mvc/EisntMvc/EisntMvc.csproj",
+        "projectUniqueName": "/home/pedmonte/C#/apps_mvc/ASPNET_RENDER_TEST/EisntMvc.csproj",
         "projectName": "EisntMvc",
-        "projectPath": "/home/pedmonte/C#/apps_mvc/EisntMvc/EisntMvc.csproj",
+        "projectPath": "/home/pedmonte/C#/apps_mvc/ASPNET_RENDER_TEST/EisntMvc.csproj",
         "packagesPath": "/home/pedmonte/.nuget/packages/",
-        "outputPath": "/home/pedmonte/C#/apps_mvc/EisntMvc/obj/",
+        "outputPath": "/home/pedmonte/C#/apps_mvc/ASPNET_RENDER_TEST/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/pedmonte/.nuget/NuGet/NuGet.Config"
@@ -45,7 +45,13 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.11, )"
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -68,10 +74,6 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[9.0.4, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[8.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

@@ -1,63 +1,58 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
-using MySql.EntityFrameworkCore.Metadata;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
 namespace EisntMvc.Migrations
 {
     /// <inheritdoc />
-    public partial class RecreateSchema : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterDatabase()
-                .Annotation("MySQL:Charset", "utf8mb4");
-
             migrationBuilder.CreateTable(
                 name: "CategoriaModel",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    Nome = table.Column<string>(type: "longtext", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Nome = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CategoriaModel", x => x.Id);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
+                });
 
             migrationBuilder.CreateTable(
                 name: "FornecedorModel",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    Nome = table.Column<string>(type: "longtext", nullable: false),
-                    Telefone = table.Column<string>(type: "longtext", nullable: false),
-                    Email = table.Column<string>(type: "longtext", nullable: false),
-                    Morada = table.Column<string>(type: "longtext", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Nome = table.Column<string>(type: "text", nullable: false),
+                    Telefone = table.Column<string>(type: "text", nullable: false),
+                    Email = table.Column<string>(type: "text", nullable: false),
+                    Morada = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_FornecedorModel", x => x.Id);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
+                });
 
             migrationBuilder.CreateTable(
                 name: "Produtos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    Sku = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
-                    Nome = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
-                    Descricao = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false),
-                    Qtd = table.Column<int>(type: "int", nullable: false),
-                    Categoria_Id = table.Column<int>(type: "int", nullable: false),
-                    Preco = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    Fornecedor_Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Sku = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    Nome = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    Descricao = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
+                    Qtd = table.Column<int>(type: "integer", nullable: false),
+                    Categoria_Id = table.Column<int>(type: "integer", nullable: false),
+                    Preco = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
+                    Fornecedor_Id = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -74,8 +69,7 @@ namespace EisntMvc.Migrations
                         principalTable: "FornecedorModel",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Produtos_Categoria_Id",
